@@ -1,7 +1,10 @@
+from loguru import logger
 from utils import openai_client
 
 
 def self_reflection(query: str, result: str) -> str | None:
+    logger.info(f"💭 Self-reflection: {query}")
+
     SYSTEM_PROMPT = """
         You are a professional research quality evaluator and expert reviewer.
         Your task is to provide a comprehensive self-reflection on the given research query and results.
@@ -32,7 +35,7 @@ def self_reflection(query: str, result: str) -> str | None:
         """
 
     res = openai_client.chat.completions.create(
-        model="gpt-4.1",
+        model="gpt-4o",
         messages=[
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": f"Query: {query}\nResult: {result}"},
