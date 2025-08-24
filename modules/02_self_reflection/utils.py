@@ -1,12 +1,13 @@
 import os
 import re
-from openai import OpenAI
+
 from dotenv import load_dotenv
 from tavily import TavilyClient
+from langfuse.openai import openai
 
 load_dotenv()
 
-openai_client = OpenAI(base_url="https://api.unli.dev/v1")
+openai_client = openai
 tavily_client = TavilyClient(api_key=os.getenv("TAVILY_API_KEY"))
 
 
