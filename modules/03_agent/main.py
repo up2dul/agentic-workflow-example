@@ -18,7 +18,7 @@ def get_weather(location: str) -> dict[str, str]:
 def get_trending_animes() -> list[dict[str, any]]:
     """Get the current trending anime titles and ratings."""
     return [
-        {"title": "Kimetsu no Yaiba: Infinity Castle", "rating": 8.8, type: "Movie"},
+        {"title": "Kimetsu no Yaiba: Infinity Castle", "rating": 8.8, "type": "Movie"},
         {"title": "Dr. Stone 4th Season", "rating": 8.5, "type": "Series"},
         {"title": "Sakamoto Days", "rating": 7.8, "type": "Series"},
     ]
