@@ -5,6 +5,7 @@ description = "Demonstration of an agentic workflow"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "agno>=2.0.11",
     "langfuse>=3.3.0",
     "loguru>=0.7.3",
     "mistralai>=1.9.7",
@@ -12,5 +13,7 @@ dependencies = [
     "openai-agents>=0.2.9",
     "python-dotenv>=1.1.1",
     "ruff>=0.12.10",
+    "sqlalchemy>=2.0.43",
     "tavily-python>=0.7.11",
+    "youtube-transcript-api>=1.2.2",
 ]
